@@ -11,10 +11,7 @@
             "skipFiles": [
                 "<node_internals>/**"
             ],
-            "program": "${workspaceFolder}\\index.tsx",
-            "outFiles": [
-                "${workspaceFolder}/**/*.tsx"
-            ]
+            "program": "${workspaceFolder}\\index.js"
         }
     ]
 }
