@@ -21,19 +21,18 @@ app.use(bodyParser.urlencoded({ extended: true }));
     });
     
     /**
-     * This is one of the many ways you can configure googleapis to use authentication credentials.  In this method, we're setting a global reference for all APIs.  Any other API you use here, like google.drive('v3'), will now use this auth client. You can also override the auth client at the service and method call levels.
+     * This is one of the many ways you can configure googleapis to use authentication credentials.
+     * In this method, we're setting a global reference for all APIs.
+     * Any other API you use here, like google.drive('v3'), will now use this auth client.
+     * You can also override the auth client at the service and method call levels.
      */
     google.options({auth});
 })();
 
 
 // Configure routes
-app.use('/api/google', googleApi);
+app.use('/api/v1/google', googleApi);
 
-app.get("/", function (req, res) {
-    res.send("Hello World!");
-});
-
-app.listen(port, function () {
-    console.log("App is listening on port 3000!");
+app.listen(port, () => {
+    console.log(`App is listening on port ${port}!`);
 });
